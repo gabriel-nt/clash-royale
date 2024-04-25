@@ -1,0 +1,43 @@
+<aside id="modal" [class.open]="isOpen">
+  <div class="backdrop" (click)="close()"></div>
+  <div class="content">
+    <div>
+      <header>
+        <h2>{{ data.name }}</h2>
+      </header>
+
+      <section>
+        <img
+          appDefaultImg
+          loading="lazy"
+          [alt]="data.name"
+          [src]="data.iconUrls.medium"
+        />
+
+        <article>
+          <div class="info-row">
+            <h3 class="roboto-bold">ID</h3>
+            <span class="roboto-bold">#{{ data.id }}</span>
+          </div>
+          <div class="info-row">
+            <h3 class="roboto-bold">Max Level</h3>
+            <span class="roboto-bold">{{ data.maxLevel }}</span>
+          </div>
+          <div class="info-row">
+            <h3 class="roboto-bold">Rarity</h3>
+            <span [class]="['roboto-bold', 'rarity-card', data.rarity]">
+              {{ data.rarity }}</span
+            >
+          </div>
+          <div class="info-row">
+            <h3 class="roboto-bold">Elixir Cost</h3>
+            <div>
+              <img alt="elixir" src="../../../../../assets/images/elixir.png" />
+              <span class="roboto-bold">{{ data.elixirCost }}</span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
+</aside>

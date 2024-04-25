@@ -1,0 +1,122 @@
+aside {
+  &.open {
+    .content {
+      opacity: 1;
+    }
+
+    .backdrop {
+      opacity: 1;
+    }
+  }
+
+  .backdrop {
+    inset: 0;
+    opacity: 0;
+    z-index: 1000;
+    position: fixed;
+    background: #00000052;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  & .content {
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: 100000;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
+
+    & > div {
+      display: flex;
+      width: 30rem;
+      padding: 0 0.725rem;
+      border-radius: 8px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 0.725rem;
+      background-color: #636a7c;
+      border: 2px solid #333333;
+    }
+
+    img {
+      width: auto;
+      height: 13rem;
+    }
+
+    header {
+      padding: 1rem 0;
+
+      h2 {
+        color: #ffffff;
+        line-height: 2rem;
+        font-size: 1.375rem;
+        text-shadow: 0 3px #000;
+        -webkit-text-stroke: 0.5px #000;
+      }
+    }
+
+    section {
+      gap: 1rem;
+      width: 100%;
+      color: #000;
+      display: flex;
+      padding: 0 1rem;
+      border-radius: 4px;
+      align-items: center;
+      background-color: #f9fbfc;
+
+      article {
+        gap: 1rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        & .info-row {
+          display: flex;
+          gap: 0.25rem 0;
+          flex-basis: 50%;
+          flex-direction: column;
+
+          .rarity-card {
+            color: #ffffff;
+            font-size: 0.8rem;
+            width: fit-content;
+            border-radius: 12px;
+            background: #666666;
+            padding: 0.25rem 0.5rem;
+            text-transform: capitalize;
+
+            &.legendary {
+              background: #65baba;
+            }
+
+            &.rare {
+              background: #fda03c;
+            }
+
+            &.epic {
+              background: #cc33ff;
+            }
+
+            &.champion {
+              background: #ffd54d;
+            }
+          }
+
+          > div {
+            gap: 0.25rem;
+            display: flex;
+            align-items: center;
+
+            img {
+              height: auto;
+              width: 1.125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
