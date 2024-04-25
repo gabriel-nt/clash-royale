@@ -1,0 +1,56 @@
+<section [class]="className">
+  <div
+    class="center-content"
+    [ngClass]="{
+      'screenshoot-left': screenshootLeft,
+      'screenshoot-right': !screenshootLeft,
+    }"
+  >
+    @if(screenshootLeft) {
+    <div class="screenshoot-container">
+      <img alt="clash royale screenshoot" [src]="screenshotImagePath" />
+    </div>
+    } @else {
+    <div class="container-image">
+      <img
+        alt="clash royale character"
+        [src]="characterImagePath"
+        [class]="characterClassName"
+      />
+    </div>
+    }
+
+    <div class="description-container">
+      <h2>
+        <ng-template [ngTemplateOutlet]="title"></ng-template>
+      </h2>
+
+      <p class="roboto-light">
+        {{ description }}
+      </p>
+
+      <button-component [text]="buttonText"></button-component>
+    </div>
+
+    @if(screenshootLeft) {
+    <div class="container-image">
+      <img
+        alt="clash royale character"
+        [src]="characterImagePath"
+        [class]="characterClassName"
+      />
+    </div>
+    } @else {
+    <div class="screenshoot-container">
+      <img alt="clash royale screenshoot" [src]="screenshotImagePath" />
+    </div>
+    }
+  </div>
+
+  <div class="how-to-play">
+    <p class="roboto-light">How To Play</p>
+    <button>
+      <mat-icon>expand_more</mat-icon>
+    </button>
+  </div>
+</section>
