@@ -1,0 +1,42 @@
+<header-component></header-component>
+
+<section>
+  @if (isFecthingCards && !cards.length) {
+  <ngx-skeleton-loader
+    count="21"
+    class="skeleton-container"
+    animation="progress"
+    [theme]="{
+      height: '224px',
+      width: '152px',
+      'border-radius': '12px',
+      'background-color': 'rgb(209 213 219)',
+    }"
+  />
+  } @else {
+  <div class="list-container">
+    @for (card of cards; track card.id) {
+    <button (click)="showDetailsModal(card.id)">
+      <img
+        appDefaultImg
+        loading="auto"
+        [alt]="card.name"
+        [src]="card.iconUrls.medium"
+      />
+      <h2>{{ card.name }}</h2>
+    </button>
+    } @empty {
+    <span>There are no items.</span>
+    }
+  </div>
+  }
+</section>
+
+@if (currentCard) {
+<detail-modal-component
+  [data]="currentCard"
+  (modalClosed)="closeDetailsModal()"
+></detail-modal-component>
+}
+
+<footer-component></footer-component>
