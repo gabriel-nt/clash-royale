@@ -1,0 +1,94 @@
+<header-component></header-component>
+
+<section class="home">
+  <div class="content">
+    <h1><span>Welcome</span><span> to the arena</span></h1>
+    <p class="roboto-light">
+      Destroy the tower with string and cute characters
+    </p>
+
+    <div class="download-buttons">
+      <button>
+        <span class="roboto-light">Download for IOS</span>
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+
+      <button>
+        <span class="roboto-light">Download for Android</span>
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+
+    <div class="how-to-play">
+      <p class="roboto-light">How To Play</p>
+      <button>
+        <mat-icon>expand_more</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
+
+<tutorial-section-component
+  buttonText="Next"
+  className="enter-arena"
+  screenshootLeft="true"
+  characterImagePath="../../../../assets/images/characters/barbarian.png"
+  screenshotImagePath="../../../../assets/images/screenshoots/screen-1.webp"
+  description="Join the King and all your favorite Clash characters to find glory in a variety of battles! Collect and upgrade dozens of cards featuring the Clash of Clans troops, spells and defenses."
+>
+  <ng-template>
+    <span style="color: #f5af2f">Enter</span>
+    <span style="color: #f5af2f">the Arena</span>
+    to Battle!
+  </ng-template>
+</tutorial-section-component>
+
+<tutorial-section-component
+  buttonText="Next"
+  className="characters"
+  screenshootLeft="false"
+  characterClassName="hog-rider"
+  characterImagePath="../../../../assets/images/characters/hog-rider.png"
+  screenshotImagePath="../../../../assets/images/screenshoots/screen-2.webp"
+  description="Assemble a powerful army to knock the enemy King and Princesses from
+        their towers to defeat your opponents and win Trophies, Crowns and glory
+        in the Arena."
+>
+  <ng-template>
+    <span style="color: #f5af2f">Detroy</span>
+    <span style="color: #f5af2f">All The</span>
+    Towers!
+  </ng-template>
+</tutorial-section-component>
+
+<tutorial-section-component
+  buttonText="Next"
+  className="towers"
+  screenshootLeft="true"
+  characterImagePath="../../../../assets/images/characters/pekka.png"
+  screenshotImagePath="../../../../assets/images/screenshoots/screen-3.webp"
+  description="Build and upgrade your card collection with the Clash Royale Family along with dozens of your favorite Clash characters, troops, spells and defenses."
+>
+  <ng-template>
+    <span style="color: #f5af2f">Cute And</span>
+    <span style="color: #f5af2f">Strong</span>
+    Characters!
+  </ng-template>
+</tutorial-section-component>
+
+<tutorial-section-component
+  buttonText="Next"
+  screenshootLeft="false"
+  className="drag-and-drop"
+  characterImagePath="../../../../assets/images/characters/ice-wizard.png"
+  screenshotImagePath="../../../../assets/images/screenshoots/screen-4.webp"
+  description='Enter one of the arenas, then "Drag and Drop" to release or contruct your ultimate fighters, spells and buildings to defeat your opponents in a fantastic battle!'
+>
+  <ng-template>
+    <span style="color: #f5af2f">Drag And</span>
+    <span style="color: #f5af2f">Drop To</span>
+    Battle!
+  </ng-template>
+</tutorial-section-component>
+
+<footer-component></footer-component>
