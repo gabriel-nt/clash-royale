@@ -1,0 +1,22 @@
+footer {
+  bottom: 0;
+  gap: 0.5rem;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  padding: 1rem 2rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 1);
+
+  img {
+    width: auto;
+    height: 1.625rem;
+  }
+
+  span {
+    color: #fff;
+    font-size: 0.625rem;
+  }
+}
