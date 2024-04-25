@@ -1,0 +1,45 @@
+button {
+  position: relative;
+  border-radius: 36px;
+  transition: all 0.2s;
+  padding: 0.725rem 5rem;
+  background-color: #f49c16;
+  box-shadow: 0px 3px #985e09;
+
+  span {
+    z-index: 4;
+    color: #fff;
+    font-size: 1rem;
+    position: relative;
+    text-shadow: 0 3px #000;
+    -webkit-text-stroke: 0.5px #000;
+  }
+
+  &::before {
+    width: 7px;
+    height: 7px;
+    z-index: 3;
+    content: "";
+    top: 0.425rem;
+    right: 0.775rem;
+    position: absolute;
+    border-radius: 36px;
+    background-color: #fff;
+  }
+
+  &::after {
+    content: "";
+    left: 4%;
+    z-index: 2;
+    width: 92%;
+    height: 50%;
+    top: 0.25rem;
+    border-radius: 36px;
+    position: absolute;
+    background-color: #e3b944;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
